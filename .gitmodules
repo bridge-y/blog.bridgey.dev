@@ -1,0 +1,3 @@
+[submodule "themes/myhugo_theme_robust"]
+	path = themes/hugo_theme_robust/
+	url = git@bitbucket.org:takaekus/myhugo_theme_robust.git
