@@ -1,7 +1,7 @@
 ---
 title: "ブログ周りのツール"
 date: 2018-02-12T23:31:47+09:00
-draft: true
+draft: false
 tags: ["Hugo", "Netlify", "Bitbucket", "IFTTT"]
 ---
 
