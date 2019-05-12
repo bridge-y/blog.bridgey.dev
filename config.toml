@@ -5,8 +5,16 @@ theme = "hugo_theme_robust"
 # 記事の要約を短くする
 hasCJKLanguage = true
 
+# 絵文字の有効化
+enableEmoji = true
+
 googleAnalytics = "UA-112771505-1" # Optional
 # disqusShortname = "XYW"
+
+# syntax highlight
+pygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsStyle = "manni"
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
