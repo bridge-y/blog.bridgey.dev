@@ -1,7 +1,7 @@
 baseURL = "https://y-stdout.netlify.com/"
 languageCode = "ja-JP"
 title = "y.stdout"
-theme = "hugo_theme_robust"
+theme = "beautifulhugo"
 # 記事の要約を短くする
 hasCJKLanguage = true
 
@@ -14,6 +14,7 @@ googleAnalytics = "UA-112771505-1" # Optional
 # syntax highlight
 pygmentsUseClasses = true
 pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "manni"
 
 [permalinks]
@@ -47,4 +48,43 @@ pygmentsStyle = "manni"
   twitter = "https://twitter.com/bridgement"
   # qiita = "https://qiita.com/yusuket"
   # github = "https://github.com/xxxxxx"
+
+########################
+# Beautiful Hugo Setting
+########################
+[Params]
+  # homeTitle = 
+  # subtitle = 
+  mainSections = ["post", "posts"]
+  logo = "images/author.jpg"
+  favicon = "img/favicon.ico"
+  commit = false
+  rss = true
+  comments = false
+  # readingTime = true
+  # wordCount = true
+  useHLJS = true
+  socialShare = true
+  delayDisqus = true
+  showRelatedPosts = true
+  # hideAuthor = true
+
+[Author]
+  name = "yusuket"
+  twitter = "bridgement"
+
+# [[menu.main]]
+#   name = "Blog"
+#   url = ""
+#   weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "page/about/"
+  weight = 3
+
+[[menu.main]]
+  name = "Tags"
+  url = "tags"
+  weight = 3
 
