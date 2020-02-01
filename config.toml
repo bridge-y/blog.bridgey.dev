@@ -12,10 +12,10 @@ googleAnalytics = "UA-112771505-1" # Optional
 # disqusShortname = "XYW"
 
 # syntax highlight
-pygmentsUseClasses = true
-pygmentsCodefences = true
-pygmentsCodefencesGuessSyntax = true
-pygmentsStyle = "manni"
+# pygmentsUseClasses = true
+# pygmentsCodefences = true
+# pygmentsCodefencesGuessSyntax = true
+# pygmentsStyle = "manni"
 
 [permalinks]
   post = "/:year/:month/:day/:slug"
@@ -30,24 +30,24 @@ pygmentsStyle = "manni"
 ################
 # Robust Setting
 ################
-[params]
-  description = "気の向くままに更新するブログです"
-  # dateformat = "Jan 2, 2006" # Optional
-
-  # Fonts settings.
-  # googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
-  # fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
-  # logofontfamily = "Lobster, cursive" # Optional, Override logo font.
-
-[params.author]
-  thumbnail = "images/author.jpg"
-  name = "yusuket"
-  description = "なんちゃって技術者です<br>このブログについては<a href=https://y-stdout.netlify.com/2018/01/22/ブログ始めました/>こちら</a>"
-  # facebook = "https://www.facebook.com/xxxxxx"
-  rss = "https://y-stdout.netlify.com/index.xml"
-  twitter = "https://twitter.com/bridgement"
-  # qiita = "https://qiita.com/yusuket"
-  # github = "https://github.com/xxxxxx"
+# [params]
+#   description = "気の向くままに更新するブログです"
+#   # dateformat = "Jan 2, 2006" # Optional
+#
+#   # Fonts settings.
+#   # googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
+#   # fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
+#   # logofontfamily = "Lobster, cursive" # Optional, Override logo font.
+#
+# [params.author]
+#   thumbnail = "images/author.jpg"
+#   name = "yusuket"
+#   description = "なんちゃって技術者です<br>このブログについては<a href=https://y-stdout.netlify.com/2018/01/22/ブログ始めました/>こちら</a>"
+#   # facebook = "https://www.facebook.com/xxxxxx"
+#   rss = "https://y-stdout.netlify.com/index.xml"
+#   twitter = "https://twitter.com/bridgement"
+#   # qiita = "https://qiita.com/yusuket"
+#   # github = "https://github.com/xxxxxx"
 
 ########################
 # Beautiful Hugo Setting
@@ -57,7 +57,7 @@ pygmentsStyle = "manni"
   # subtitle = 
   mainSections = ["post", "posts"]
   logo = "images/author.jpg"
-  favicon = "img/favicon.ico"
+  # favicon = "img/favicon.ico"
   commit = false
   rss = true
   comments = false
@@ -80,7 +80,7 @@ pygmentsStyle = "manni"
 
 [[menu.main]]
   name = "About"
-  url = "page/about/"
+  url = "/page/about/"
   weight = 3
 
 [[menu.main]]
