@@ -1,0 +1,16 @@
+blockquote {
+  font-size: 0.8em;
+  padding-bottom: 0;
+}
+blockquote a.author {
+    font-size: 1em;
+    line-height: 3em;
+    font-style: normal;
+    text-decoration: none;
+    border-bottom: 1px dashed;
+}
+blockquote a.author:hover {
+      font-weight: bold;
+      border-bottom: 2px dashed;
+}
+
