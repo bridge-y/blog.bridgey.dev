@@ -3,13 +3,6 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <!-- {{ if eq .Params.toc true }} -->
-        <!--   <aside> -->
-        <!--     {{partial "toc.html" .}} -->
-        <!--   </aside> -->
-        <!-- {{ end }} -->
-
-        <!-- {{ .Content }} -->
         {{- /* 一応「tocMove」で動作を切り替えられるようにしておく */ -}}
         {{- if (.Param "tocMove" | default true) -}}
             {{- /* 正規表現でh[1-6]を探す */ -}}
