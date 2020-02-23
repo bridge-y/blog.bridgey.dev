@@ -68,6 +68,7 @@ googleAnalytics = "UA-112771505-1" # Optional
   delayDisqus = true
   showRelatedPosts = true
   # hideAuthor = true
+  customCSS = ["/css/toc.css", "/css/blockquote.css"]
 
 [Author]
   name = "yusuket"
