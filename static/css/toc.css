@@ -1,0 +1,28 @@
+#TableOfContents > ul {
+  font-size: smaller;
+  border-radius: 0.5em;
+  border: solid 1px lightgray;
+  padding: 0.5em 1em;
+  line-height: 2;
+}
+#TableOfContents > ul:before {
+  content: "目次";
+  /* content: "Contents"; */
+  font-weight: bolder;
+}
+#TableOfContents ul {
+  list-style-type: none;
+}
+#TableOfContents li {
+  padding-top: 0;
+}
+#TableOfContents li > ul {
+  padding-left: 1em;
+  width: 100%;
+}
+#TableOfContents a {
+  font-weight: normal;
+  display: block;
+  border-bottom: dashed 1px lightgray;
+}
+

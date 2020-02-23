@@ -1,0 +1,116 @@
+{{ define "main" }}
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <!-- {{ if eq .Params.toc true }} -->
+        <!--   <aside> -->
+        <!--     {{partial "toc.html" .}} -->
+        <!--   </aside> -->
+        <!-- {{ end }} -->
+
+        <!-- {{ .Content }} -->
+        {{- /* 一応「tocMove」で動作を切り替えられるようにしておく */ -}}
+        {{- if (.Param "tocMove" | default true) -}}
+            {{- /* 正規表現でh[1-6]を探す */ -}}
+            {{- $header := (findRE "<h[1-6].*?>(?:.|\n)*?</h[1-6]>" .Content) -}}
+            {{- /* 最初に出現するh[1-6]を取得 */ -}}
+            {{- $firstH := index $header 0 -}}
+
+            {{- if ne $firstH nil -}}
+                {{- /* ヘッダーの前にToCを結合した「新しいヘッダー」を作成 */ -}}
+                {{- $newH := printf `%s%s` .TableOfContents $firstH -}}
+                {{- /* 古いヘッダーを新しいヘッダーに置換して出力 */ -}}
+                {{- replace .Content $firstH $newH | safeHTML -}}
+            {{- else -}}
+                {{- /* そもそもヘッダーがない時は普通に出力 */ -}}
+                {{- .Content -}}
+            {{- end -}}
+        {{- else -}}
+            {{- /* tocMove = falseの時 */ -}}
+            {{- .TableOfContents -}}
+            {{- .Content -}}
+        {{- end -}}
+
+        {{ if .Params.tags }}
+          <div class="blog-tags">
+            {{ range .Params.tags }}
+              <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+            {{ end }}
+          </div>
+        {{ end }}
+
+        {{ if $.Param "socialShare" }}
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                {{ partial "share-links" . }}
+              </div>
+            </section>
+        {{ end }}
+
+        {{ if .Site.Params.showRelatedPosts }}
+          {{ range first 1 (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+            {{ $.Scratch.Set "has_related" true }}
+          {{ end }}
+
+          {{ if $.Scratch.Get "has_related" }}
+                  <h4 class="see-also">{{ i18n "seeAlso" }}</h4>
+                  <ul>
+                {{ $num_to_show := .Site.Params.related_content_limit | default 5 }}
+                {{ range first $num_to_show (where (where .Site.Pages ".Params.tags" "intersect" .Params.tags) "Permalink" "!=" .Permalink) }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+
+          {{ end }}
+        {{ end }}
+      </article>
+
+      {{ if ne .Type "page" }}
+        <ul class="pager blog-pager">
+          {{ if .PrevInSection }}
+            <li class="previous">
+              <a href="{{ .PrevInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .PrevInSection.Title }}">&larr; {{ i18n "previousPost" }}</a>
+            </li>
+          {{ end }}
+          {{ if .NextInSection }}
+            <li class="next">
+              <a href="{{ .NextInSection.Permalink }}" data-toggle="tooltip" data-placement="top" title="{{ .NextInSection.Title }}">{{ i18n "nextPost" }} &rarr;</a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+
+      {{ if (.Params.comments) | or (and (or (not (isset .Params "comments")) (eq .Params.comments nil)) (and .Site.Params.comments (ne .Type "page"))) }}
+        {{ if .Site.DisqusShortname }}
+          {{ if .Site.Params.delayDisqus }}
+          <div class="disqus-comments">
+            <button id="show-comments" class="btn btn-default" type="button">{{ i18n "show" }} <span class="disqus-comment-count" data-disqus-url="{{ trim .Permalink "/" }}">{{ i18n "comments" }}</span></button>
+            <div id="disqus_thread"></div>
+
+            <script type="text/javascript">
+              var disqus_config = function () {
+              this.page.url = '{{ trim .Permalink "/" }}';
+            };
+
+          </script>
+          </div>
+          {{ else }}
+          <div class="disqus-comments">
+            {{ template "_internal/disqus.html" . }}
+          </div>
+          {{ end }}
+        {{ end }}
+        {{ if .Site.Params.staticman }}
+          <div class="staticman-comments">
+            {{ partial "staticman-comments.html" . }}
+          </div>
+        {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+</div>
+{{ end }}
