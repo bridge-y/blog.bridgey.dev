@@ -3,25 +3,25 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        {{- /* 一応「tocMove」で動作を切り替えられるようにしておく */ -}}
-        {{- if (.Param "tocMove" | default true) -}}
-            {{- /* 正規表現でh[1-6]を探す */ -}}
-            {{- $header := (findRE "<h[1-6].*?>(?:.|\n)*?</h[1-6]>" .Content) -}}
-            {{- /* 最初に出現するh[1-6]を取得 */ -}}
-            {{- $firstH := index $header 0 -}}
+        {{- /* tocパラメータを確認 */ -}}
+        {{- if (.Param "toc" | default false) -}}
+            {{- /* 一応「tocMove」で動作を切り替えられるようにしておく */ -}}
+            {{- if (.Param "tocMove" | default false) -}}
+                {{- $header := (findRE "<h[1-6].*?>(?:.|\n)*?</h[1-6]>" .Content) -}}
+                {{- $firstH := index $header 0 -}}
 
-            {{- if ne $firstH nil -}}
-                {{- /* ヘッダーの前にToCを結合した「新しいヘッダー」を作成 */ -}}
-                {{- $newH := printf `%s%s` .TableOfContents $firstH -}}
-                {{- /* 古いヘッダーを新しいヘッダーに置換して出力 */ -}}
-                {{- replace .Content $firstH $newH | safeHTML -}}
+                {{- if ne $firstH nil -}}
+                    {{- $newH := printf `%s%s` .TableOfContents $firstH -}}
+                    {{- replace .Content $firstH $newH | safeHTML -}}
+                {{- else -}}
+                    {{- .Content -}}
+                {{- end -}}
             {{- else -}}
-                {{- /* そもそもヘッダーがない時は普通に出力 */ -}}
+                {{- .TableOfContents -}}
                 {{- .Content -}}
             {{- end -}}
         {{- else -}}
-            {{- /* tocMove = falseの時 */ -}}
-            {{- .TableOfContents -}}
+            {{- /* ToC使わないとき */ -}}
             {{- .Content -}}
         {{- end -}}
 
