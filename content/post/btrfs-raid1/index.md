@@ -16,7 +16,7 @@ tags: ["btrfs", "RAID1"]
 
 ## 増設前
 
-```bash
+```
 $ sudo btrfs filesystem show
 Label: none  uuid: 305a40e0-c4d7-11e8-8c28-94c691a3435d
 	Total devices 1 FS bytes used 73.99GiB
@@ -41,7 +41,7 @@ Label: 'hdd'  uuid: b80a9963-5ed9-488c-be88-d2a3eb2d6866
   今回は4TBのHDDを2台挿入しました。それぞれデバイス名は`/dev/sdc`, `/dev/sdd`です。(デバイス名は環境によって変わります)
 
 - btrfsにフォーマット  
-  ```bash
+  ```
   $ sudo gdisk /dev/sdc
   # n を入力 -> すべてデフォルトでよいのでEnter -> w を入力
   $ sudo gdisk /dev/sdd
@@ -52,7 +52,7 @@ Label: 'hdd'  uuid: b80a9963-5ed9-488c-be88-d2a3eb2d6866
   ```
 
 - 既存のストレージプールに追加
-  ```bash
+  ```
   $ sudo mount -t btrfs /dev/sda /mnt/raid  # /mnt/raidに既存のストレージをマウント
   $ sudo btrfs device add -f /dev/sdc1 /dev/sdd1 /mnt/raid/
   ```
@@ -61,7 +61,7 @@ Label: 'hdd'  uuid: b80a9963-5ed9-488c-be88-d2a3eb2d6866
 
 増設後は以下のような感じです。
 
-```bash
+```
 $ sudo btrfs filesystem show
 Label: none  uuid: 305a40e0-c4d7-11e8-8c28-94c691a3435d
 	Total devices 1 FS bytes used 73.87GiB
@@ -75,7 +75,7 @@ Label: 'hdd'  uuid: b80a9963-5ed9-488c-be88-d2a3eb2d6866
 ```
 
 増設したHDDにはまだデータがないため、これを以下のコマンドでRAID1に変換しつつバランスよく再配置します。  
-```bash
+```
 $ sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /mnt/raid
 ```
 
@@ -87,7 +87,7 @@ $ sudo btrfs balance start -dconvert=raid1 -mconvert=raid1 /mnt/raid
 RAID1にしたので、定期的にデータの破損がないかチェックします。  
 
 `/etc/cron.weekly`に`btrfs-scrub`というファイルを作成し、以下のコードを記述しました。  
-```bash
+```
 #!/bin/sh
 #
 # run btrfs scrub on raid disk (label: hdd) weekly
@@ -99,13 +99,13 @@ btrfs scrub start /mnt/raid/
 
 実行権限を付与するのも忘れずに。  
 
-```bash
+```
 $ chmod +x btrfs-scrub
 ```
 
 ## RAID1への変換後
 
-```bash
+```
 $ sudo btrfs filesystem show
 Label: none  uuid: 305a40e0-c4d7-11e8-8c28-94c691a3435d
 	Total devices 1 FS bytes used 73.28GiB
@@ -124,7 +124,7 @@ Label: 'hdd'  uuid: b80a9963-5ed9-488c-be88-d2a3eb2d6866
 Btrfs はディスクに分散してブロックペアを配置するのにラウンドロビン方式を使っています。Linux 3.0 から,ブロックペアを分散する際に大きなディスクを優先するように quasi-round-robin 方式が使われています。
 {{< /blockquote >}}
 
-```bash
+```
 $ sudo btrfs filesystem df /mnt/raid/
 Data, RAID1: total=1.45TiB, used=1.45TiB
 System, RAID1: total=32.00MiB, used=240.00KiB

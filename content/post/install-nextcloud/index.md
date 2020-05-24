@@ -33,7 +33,7 @@ Dockerを使ってインストールしました。
   - Docker Engine: version 19.03.8
   - docker-compose: version 1.25.4
 - Composeファイル
-```yaml
+```
 version: '3.7'
 
 services:

@@ -20,7 +20,7 @@ btrfs-progs: v4.15.1
 上記環境だと`btrfs send`が動作しなかった。
 
 # 必要なソフトウェアのインストール
-```bash
+```
 $ sudo apt install git asciidoc xmlto --no-install-recommends
 $ sudo apt install python3.6-dev
 $ sudo apt install uuid-dev libattr1-dev zlib1g-dev libacl1-dev e2fslibs-dev libblkid-dev liblzo2-dev libzstd-dev
@@ -29,7 +29,7 @@ $ sudo apt install uuid-dev libattr1-dev zlib1g-dev libacl1-dev e2fslibs-dev lib
 
 `configure`でエラーが出たので、`--disable-convert`オプションを付けた。  
 
-```bash
+```
 $ git clone git://git.kernel.org/pub/scm/linux/kernel/git/kdave/btrfs-progs.git
 $ cd btrfs-progs/
 $ ./autogen.sh
@@ -40,7 +40,7 @@ $ sudo make install
 
 # バージョン確認
 
-```bash
+```
 $ btrfs version
 btrfs-progs v5.4.1
 ```

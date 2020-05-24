@@ -54,7 +54,7 @@ Incremental Snapshot Transfer<br>
 そうでない場合の設定については、まだドキュメント[^3]を正確に理解していないため試していません。  
 [Snapperの推奨ファイルシステムレイアウト](https://wiki.archlinux.jp/index.php/Snapper#.E6.8E.A8.E5.A5.A8.E3.83.95.E3.82.A1.E3.82.A4.E3.83.AB.E3.82.B7.E3.82.B9.E3.83.86.E3.83.A0.E3.83.AC.E3.82.A4.E3.82.A2.E3.82.A6.E3.83.88)のようにサブボリュームをマウントして使用している場合は、ルートをマウントします。  
 
-```bash
+```
 $ sudo mount -t btrfs /dev/sda /mnt/raid
 ```
 
@@ -101,7 +101,7 @@ volume /mnt/raid/
 
 下記スクリプトを **/etc/cron.daily/btrbk**に記述し、毎日バックアップするようにしました。  
 
-```bash
+```
 #!/bin/sh
 exec /usr/sbin/btrbk -q run
 ```
