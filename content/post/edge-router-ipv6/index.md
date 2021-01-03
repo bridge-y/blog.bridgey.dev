@@ -21,6 +21,8 @@ tags: ["ルータ", "EdgeRouter", "IPv6"]
 本記事には試行錯誤の過程をすべて記載しております。  
 記載されている設定は、IPv6を使えるようにする最小限の設定ではない点にご注意ください。
 
+(2021/01/03 追記) `save`コマンドが抜けていたため追記。
+
 ## IPv6のファイアウォール設定
 参考ページ: [EdgeRouterでIPoE(IPv6)インターネットを接続を行う(ひかり電話あり) – nosense](http://www.nosense.jp/edgerouter-ipoe/)
 
@@ -56,6 +58,7 @@ set firewall ipv6-name WANv6_LOCAL rule 40 description 'allow dhcpv6'
 set firewall ipv6-name WANv6_LOCAL rule 40 destination port 546
 set firewall ipv6-name WANv6_LOCAL rule 40 protocol udp
 commit
+save  # 2021/01/03 追記
 exit
 ```
 
@@ -102,6 +105,7 @@ EdgeRouterにログインし、下記のコマンドを実行する。
 configure
 set interfaces ethernet eth0 ipv6 address autoconf
 commit
+save  # 2021/01/03 追記
 exit
 ```
 
@@ -328,5 +332,6 @@ ndppdが自動で起動するように、2つのスクリプトを設置する�
   set interfaces switch switch0 ipv6 router-advert retrans-timer 0
   set interfaces switch switch0 ipv6 router-advert send-advert true
   commit
+  save  # 2021/01/03 追記
   exit
   ```
