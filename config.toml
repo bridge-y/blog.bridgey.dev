@@ -71,7 +71,7 @@ googleAnalytics = "UA-112771505-1" # Optional
   customCSS = ["/css/toc.css", "/css/blockquote.css"]
 
 [Author]
-  name = "yusuket"
+  name = "yusuke"
   twitter = "bridgement"
 
 # [[menu.main]]
