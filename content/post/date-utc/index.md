@@ -1,5 +1,6 @@
 ---
 title: "dateコマンドで時刻をUTCに変換する"
+slug: convert-timezone-to-utc-with-date-command
 author: ""
 type: ""
 date: 2019-10-06T16:44:50+09:00

@@ -1,5 +1,6 @@
 ---
 title: "パスワード管理方法のメモ"
+slug: about-my-password-management
 author: ""
 type: ""
 date: 2020-08-17T10:08:31+09:00

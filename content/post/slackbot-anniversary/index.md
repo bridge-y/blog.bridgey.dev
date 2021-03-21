@@ -1,5 +1,6 @@
 ---
 title: "Slackで記念日を通知"
+slug: notify-anniversary-with-slack
 date: 2019-05-12T18:43:44+09:00
 draft: false
 tags: ["Slack", "Bot", "Python"]

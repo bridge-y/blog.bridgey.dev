@@ -1,5 +1,6 @@
 ---
 title: "NFSサーバとDocker Swarmノードを兼用している環境でNFSボリュームを使う際の注意"
+slug: tips-using-nfs-volume-on-environment-both-nfs-server-and-docker-swarm-node
 author: ""
 type: ""
 date: 2021-03-02T22:02:13+09:00

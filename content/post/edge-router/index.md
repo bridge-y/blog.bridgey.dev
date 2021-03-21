@@ -1,5 +1,6 @@
 ---
 title: "EdgeRouter Xを買った"
+slug: buy-edgerouter-x
 author: ""
 type: ""
 date: 2019-11-17T18:46:04+09:00

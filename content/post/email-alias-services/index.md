@@ -1,5 +1,6 @@
 ---
 title: "サービスごとにユニークなメールアドレスを使いたい"
+slug: email-alias-services
 author: ""
 type: ""
 date: 2020-08-29T16:52:43+09:00

@@ -1,5 +1,6 @@
 ---
 title: "Preview GeneratorでNextcloudのサムネイル生成"
+slug: generate-thumbnails-on-nextcloud-using-preview-generator
 author: ""
 type: ""
 date: 2020-05-31T18:26:29+09:00
