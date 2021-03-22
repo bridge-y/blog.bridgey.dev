@@ -1,5 +1,6 @@
 ---
 title: "btrfs-progsの最新版をインストール"
+slug: install-latest-btrfs-progs
 author: ""
 type: ""
 date: 2020-02-11T15:47:50+09:00

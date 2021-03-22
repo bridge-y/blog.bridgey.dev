@@ -1,5 +1,6 @@
 ---
 title: "EdgeRouter XのIPv6対応（ひかり電話なし）"
+slug: use-ipv6-with-edgerouter-x
 author: ""
 type: ""
 date: 2020-05-23T21:20:12+09:00

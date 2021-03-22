@@ -1,5 +1,6 @@
 ---
 title: "給電できるディスプレイを買った"
+slug: buy-p2720dc-dell
 author: ""
 type: ""
 date: 2020-06-14T13:05:45+09:00

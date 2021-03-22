@@ -1,5 +1,6 @@
 ---
 title: "ブログ始めました"
+slug: my-first-post
 date: 2018-01-22T23:27:56+09:00
 draft: false
 tags: ["雑記"]

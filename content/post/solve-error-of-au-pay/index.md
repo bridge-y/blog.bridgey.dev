@@ -1,5 +1,6 @@
 ---
 title: "au PAYアプリでau IDにログインできなかった問題を解決した"
+slug: problem-logging-in-au-id-on-au-pay
 author: ""
 type: ""
 date: 2021-02-07T12:28:50+09:00

@@ -1,5 +1,6 @@
 ---
 title: "Btrbkを使ったバックアップ"
+slug: backup-using-btrbk
 author: ""
 type: ""
 date: 2020-03-14T13:58:58+09:00
@@ -101,7 +102,7 @@ volume /mnt/raid/
 
 下記スクリプトを **/etc/cron.daily/btrbk**に記述し、毎日バックアップするようにしました。  
 
-```
+```bash
 #!/bin/sh
 exec /usr/sbin/btrbk -q run
 ```

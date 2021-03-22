@@ -1,5 +1,6 @@
 ---
 title: "Slackで授乳記録"
+slug: record-childcare-with-slack
 author: ""
 type: ""
 date: 2019-12-14T18:30:12+09:00

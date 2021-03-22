@@ -1,7 +1,7 @@
-baseURL = "https://y-stdout.netlify.com/"
+baseURL = "https://blog.bridgey.dev/"
 languageCode = "ja-JP"
-title = "y.stdout"
-theme = "beautifulhugo"
+title = "blog.bridgey.dev"
+theme = "tale"
 # 記事の要約を短くする
 hasCJKLanguage = true
 
@@ -12,9 +12,9 @@ googleAnalytics = "UA-112771505-1" # Optional
 # disqusShortname = "XYW"
 
 # syntax highlight
-# pygmentsUseClasses = true
-# pygmentsCodefences = true
-# pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
 # pygmentsStyle = "manni"
 
 [permalinks]
@@ -27,65 +27,20 @@ googleAnalytics = "UA-112771505-1" # Optional
   home = [ "HTML", "RSS" ]
   page = [ "HTML", "AMP" ]
 
-################
-# Robust Setting
-################
-# [params]
-#   description = "気の向くままに更新するブログです"
-#   # dateformat = "Jan 2, 2006" # Optional
-#
-#   # Fonts settings.
-#   # googlefonts = "https://fonts.googleapis.com/css?family=Lobster|Lato:400,700" # Optional, Include google fonts.
-#   # fontfamily = "Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif" # Optional, Override body font family.
-#   # logofontfamily = "Lobster, cursive" # Optional, Override logo font.
-#
-# [params.author]
-#   thumbnail = "images/author.jpg"
-#   name = "yusuket"
-#   description = "なんちゃって技術者です<br>このブログについては<a href=https://y-stdout.netlify.com/2018/01/22/ブログ始めました/>こちら</a>"
-#   # facebook = "https://www.facebook.com/xxxxxx"
-#   rss = "https://y-stdout.netlify.com/index.xml"
-#   twitter = "https://twitter.com/bridgement"
-#   # qiita = "https://qiita.com/yusuket"
-#   # github = "https://github.com/xxxxxx"
-
-########################
-# Beautiful Hugo Setting
-########################
 [Params]
-  # homeTitle = 
-  # subtitle = 
-  mainSections = ["post", "posts"]
-  logo = "images/author.jpg"
-  # favicon = "img/favicon.ico"
-  commit = false
-  rss = true
-  comments = false
-  # readingTime = true
-  # wordCount = true
-  useHLJS = true
-  socialShare = true
-  delayDisqus = true
-  showRelatedPosts = true
-  # hideAuthor = true
-  customCSS = ["/css/toc.css", "/css/blockquote.css"]
+  css = ["/css/toc.css", "/css/blockquote.css", "/css/syntax.css"]
+  mainSections = ["post"]
 
 [Author]
   name = "yusuke"
-  twitter = "bridgement"
-
-# [[menu.main]]
-#   name = "Blog"
-#   url = ""
-#   weight = 1
 
 [[menu.main]]
   name = "About"
-  url = "/page/about/"
-  weight = 3
+  url = "/about"
+  weight = 2
 
 [[menu.main]]
   name = "Tags"
-  url = "tags"
+  url = "/tags"
   weight = 3
 

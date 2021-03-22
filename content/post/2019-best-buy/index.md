@@ -2,6 +2,7 @@
 title: "2019年に買ってよかったもの"
 author: ""
 type: ""
+slug: 2019-best-buy
 date: 2019-12-28T11:47:51+09:00
 draft: false
 subtitle: ""

@@ -1,5 +1,6 @@
 ---
 title: "ノートPCを買ってセットアップした話"
+slug: buy-new-laptop
 author: ""
 type: ""
 date: 2021-01-25T22:13:38+09:00

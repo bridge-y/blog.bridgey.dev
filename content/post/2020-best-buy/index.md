@@ -2,6 +2,7 @@
 title: "2020年に買ってよかったもの"
 author: ""
 type: ""
+slug: 2020-best-buy
 date: 2020-12-27T23:03:04+09:00
 draft: false
 subtitle: ""

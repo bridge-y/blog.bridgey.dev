@@ -1,5 +1,6 @@
 ---
 title: "btrfsでHDDを増設してRAID1に変換する"
+slug: convert-to-raid1-on-btrfs
 author: ""
 type: ""
 date: 2020-02-23T13:49:48+09:00

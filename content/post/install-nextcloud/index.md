@@ -1,5 +1,6 @@
 ---
 title: "自宅サーバにNextcloudを設置した"
+slug: install-nextcloud
 author: ""
 type: ""
 date: 2020-04-07T20:05:16+09:00
