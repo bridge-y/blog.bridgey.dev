@@ -95,7 +95,7 @@ SMART support is: Enabled
 sudo btrfs replace start /dev/sdd1 /dev/sde /mnt/raid/
 ```
 
-{{< tweet 1373316358331457537 >}}  
+{{< tweet user="bridgement" id="1373316358331457537" >}}  
 
 1日に3%しか進まなくて絶望していましたが、1週間経って22％くらいになってからは、1日に20%進むようになりました。
 

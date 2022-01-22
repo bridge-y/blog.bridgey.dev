@@ -14,7 +14,7 @@ tags: ["ルータ", "EdgeRouter", "IPv6"]
 
 [EdgeRourer Xを買ってから]({{<ref "/post/edge-router/index.md">}})、ずっとやろうと思ってやっていませんでしたが、ようやくIPv6を使用するための設定をしました。  
 
-{{<tweet 1256981117141266432>}}
+{{<tweet user="bridgement" id="1256981117141266432">}}
 
 (設定してから記事にするまでにも間があいてしまいました)
 

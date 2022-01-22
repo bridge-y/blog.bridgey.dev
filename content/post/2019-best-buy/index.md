@@ -43,7 +43,7 @@ micro USB, Type-C, ライトニングなど、充電の際、端子に合わせ�
 
 mont-bellの[マルチフォールディングテーブル](https://webshop.montbell.jp/goods/disp.php?product_id=1122635)を買いました。  
 
-{{<tweet 1166314778551181313 >}}
+{{<tweet user="bridgement" id="1166314778551181313" >}}
 
 ソファの高さに合ったテーブルが欲しいと思ってたところ、マルチフォールディングテーブルの情報を得たので買ってしまいました。  
 
