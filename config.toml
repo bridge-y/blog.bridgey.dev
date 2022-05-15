@@ -8,7 +8,7 @@ hasCJKLanguage = true
 # 絵文字の有効化
 enableEmoji = true
 
-googleAnalytics = "UA-112771505-1" # Optional
+# googleAnalytics = "" # Optional
 # disqusShortname = "XYW"
 
 # syntax highlight
