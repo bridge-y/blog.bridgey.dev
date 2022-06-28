@@ -28,7 +28,7 @@ pygmentsCodefencesGuessSyntax = true
   page = [ "HTML", "AMP" ]
 
 [Params]
-  css = ["/css/toc.css", "/css/blockquote.css", "/css/syntax.css"]
+  css = ["/css/toc.css", "/css/blockquote.css", "/css/syntax.css", "/css/table.css"]
   mainSections = ["post"]
 
 [Author]
