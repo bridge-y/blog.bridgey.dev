@@ -31,6 +31,8 @@ VPSと自宅サーバへの経路はTailscaleで確保できているため、�
 #!/bin/sh
 INTERNAL_SERVER=192.0.2.1  # 実際は自宅サーバのTailscaleのIPアドレス
 
+iptables -t nat -D PREROUTING $(iptables -t nat -n -L PREROUTING --line-numbers | grep "wormhole-prerouting" | awk '{print $1}')
+iptables -t nat -F wormhole-prerouting
 iptables -t nat -X wormhole-prerouting
 
 # PREROUTING
