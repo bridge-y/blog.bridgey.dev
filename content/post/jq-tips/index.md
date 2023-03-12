@@ -9,38 +9,32 @@ subtitle: ""
 image: ""
 toc: false
 tocMove: false
-tags: ['jq']
+tags: ["jq"]
 ---
 
 ひと工夫必要だったのでメモ。
 
 ## やりたいこと
 
-jqコマンドを使って値をキーとしたオブジェクトに整形したい。具体例を挙げると以下のようなイメージ。
+jq コマンドを使って値をキーとしたオブジェクトに整形したい。具体例を挙げると以下のようなイメージ。
 
 ```json
 {
   "name": "taro",
   "age": 20,
-  "info": [
-    "hoge",
-    "fuga"
-  ]
+  "info": ["hoge", "fuga"]
 }
 ```
 
-上のようなJSONを、下のように加工したい。
+上のような JSON を、下のように加工したい。
 
 ```json
 {
-  "taro": [
-    "hoge",
-    "fuga"
-  ]
+  "taro": ["hoge", "fuga"]
 }
 ```
 
-## jqでは取得した値をオブジェクトのキーにできない
+## jq では取得した値をオブジェクトのキーにできない
 
 検証環境は次の通り。
 
@@ -62,7 +56,15 @@ jq: 2 compile errors
 
 ## 解決方法
 
-キーとしたい値を使って適当なオブジェクトを作り、そこから値を取得する。  
+（追記）Twitter で簡単な方法を教えていただきました。
+
+```bash
+echo '{"name":"taro","age":20,"info":["hoge", "fuga"]}' | jq '. | {(.name): .info}'
+```
+
+### 別解
+
+キーとしたい値を使って適当なオブジェクトを作り、そこから値を取得する。
 
 ```bash
 $ echo '{"name":"taro","age":20,"info":["hoge", "fuga"]}' | jq '. | {({name: .name} | to_entries[] | .value): .info}'
