@@ -1,5 +1,5 @@
 ---
-title: "mdbookで日本語検索"
+title: "mdBookで日本語検索"
 slug: search-japanese-on-mdbook
 author: ""
 type: ""
@@ -9,10 +9,10 @@ subtitle: ""
 image: ""
 toc: false
 tocMove: false
-tags: ["mdbook"]
+tags: ["mdBook"]
 ---
 
-[mdbook](https://github.com/rust-lang/mdBook)はデフォルトで日本語検索できない。
+[mdBook](https://github.com/rust-lang/mdBook)はデフォルトで日本語検索できない。
 
 調べたら日本語で検索できる方法を見つけたので、備忘録として書いておく。
 
