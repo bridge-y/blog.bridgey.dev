@@ -13,7 +13,7 @@ tags: ["Twitter", "Mastodon", "Bluesky", "Cloudflare Workers"]
 ---
 
 Twitter（名称が X に変わったが、本記事では旧称を使用する）のバックアップとして Mastodon と Bluesky を使うことにした。  
-Mastodon インスタンスについてはこちら: [SAML 認証の Mastodon インスタンスのセットアップ]({{<ref "/post/setup-mastodon-with-saml/index.md">}}))
+Mastodon インスタンスについてはこちら: [SAML 認証の Mastodon インスタンスのセットアップ]({{<ref "/post/setup-mastodon-with-saml/index.md">}})
 
 それぞれに同じ内容を手作業で投稿するのは面倒であるため、自動化する仕組みを作った。
 
