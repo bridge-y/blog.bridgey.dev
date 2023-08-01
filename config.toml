@@ -30,6 +30,7 @@ pygmentsCodefencesGuessSyntax = true
 [Params]
   css = ["/css/toc.css", "/css/blockquote.css", "/css/syntax.css", "/css/table.css"]
   mainSections = ["post"]
+  images = ["/images/twitter-card.png"]
 
 [Author]
   name = "yusuke"
