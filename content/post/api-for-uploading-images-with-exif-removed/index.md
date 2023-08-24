@@ -17,7 +17,7 @@ Rust で API を実装した。
 
 ## 作ったもの
 
-[![bridgey-public / Gyazo Uploader](https://gitlab-card.bridgey.workers.dev/repos/bridgey-public/gyazo-uploader?fullname=&link_target=_blank)](https://gitlab.com/bridgey-public/gyazo-uploader)
+[![bridgey-public / Gyazo Uploader](https://gitlab-card.bridgey.workers.dev/projects/bridgey-public/gyazo-uploader?fullname=&link_target=_blank)](https://gitlab.com/bridgey-public/gyazo-uploader)
 
 ## なぜ作ったか
 
