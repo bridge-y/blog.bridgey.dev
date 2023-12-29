@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "preset-smarthr": {
+      "ja-space-around-code": {
+        "before": true,
+        "after": true
+      },
+      "ja-space-between-half-and-full-width": {
+        "space": "always"
+      }
+    }
+  },
+  "filters": {
+    "comments": true
+  }
+}
