@@ -4,7 +4,7 @@ slug: summarize-web-page-saved-to-pocket-automatically-by-ifttt-ai-summarizer
 author: ""
 type: ""
 date: 2024-12-31T21:24:37+09:00
-draft: true
+draft: false
 subtitle: ""
 image: ""
 toc: true
